@@ -8,6 +8,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 
 </head>
@@ -17,10 +20,43 @@
     <section class="signup-container">
         <div class="signup-header">
             <h1 class="title">DevChain</h1>
-            <p class="signup-title">Sign up</p>
+            <p class="signup-name">Sign up</p>
         </div>
         <div class="signup-form">
+            <!-- name-part  -->
+            <div class="name-part">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name">
+                <p class="name-input-err msg">Enter valid name</p>
+            </div>
 
+            <!-- email-part  -->
+            <div class="email-part">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email">
+                <p class="email-input-err msg">Enter valid email</p>
+            </div>
+
+            <!-- phone-part  -->
+            <div class="phone-part">
+                <label for="phone">Phone</label>
+                <input type="tel" name="phone" id="phone">
+                <p class="phone-input-err msg">Enter valid number</p>
+            </div>
+
+            <!-- linkedin profile slug part  -->
+            <div class="linkedin-profile-part">
+                <label for="phone">Profile</label>
+                <input type="text" name="profile" id="profile">
+                <p class="profile-input-err msg">Enter valid url</p>
+            </div>
+
+            <!-- password part  -->
+            <div class="mdi-textbox-password">
+                <label for="password">Password</label>
+                <input type="text" name="password" id="password">
+                <p class="password-input-err msg">Enter valid password</p>
+            </div>
         </div>
 
         <div class="signup-footer"></div>
