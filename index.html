@@ -11,6 +11,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 
 </head>
@@ -26,40 +27,53 @@
             <!-- name-part  -->
             <div class="name-part">
                 <label for="name">Name</label>
-                <input type="text" name="name" id="name">
-                <p class="name-input-err msg">Enter valid name</p>
+                <input type="text" name="name" id="name" placeholder="Ex- Abdur Rahman">
+                <p class="name-input-err msg input-err-msg">Enter valid name</p>
             </div>
 
             <!-- email-part  -->
             <div class="email-part">
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email">
-                <p class="email-input-err msg">Enter valid email</p>
+                <label for="email">Email*</label>
+                <input type="text" name="email" id="email" placeholder="abc@dev.com">
+                <p class="email-input-err msg input-err-msg">Enter valid email</p>
             </div>
 
             <!-- phone-part  -->
             <div class="phone-part">
                 <label for="phone">Phone</label>
-                <input type="tel" name="phone" id="phone">
-                <p class="phone-input-err msg">Enter valid number</p>
+                <input type="text" name="phone" id="phone" placeholder="+88014*****">
+                <p class="phone-input-err msg input-err-msg">Enter valid number</p>
             </div>
 
             <!-- linkedin profile slug part  -->
             <div class="linkedin-profile-part">
                 <label for="phone">Profile</label>
-                <input type="text" name="profile" id="profile">
-                <p class="profile-input-err msg">Enter valid url</p>
+                <input type="text" name="profile" id="profile" placeholder="https://www.linkedin.com/in/ab-apu/">
+                <p class="profile-input-err msg input-err-msg">Enter valid url</p>
             </div>
 
             <!-- password part  -->
             <div class="mdi-textbox-password">
                 <label for="password">Password</label>
-                <input type="text" name="password" id="password">
-                <p class="password-input-err msg">Enter valid password</p>
+                <input type="text" name="password" id="password" placeholder="*****************">
+                <p class="password-input-err msg input-err-msg">Enter valid password</p>
+            </div>
+
+            <!-- password related  -->
+            <div class="password-strength-generate">
+                <button>G</button>
+                <div class="strength-indicator">
+                    <p class="indicator"></p>
+                    <p class="indicator-text">Low</p>
+                </div>
             </div>
         </div>
 
-        <div class="signup-footer"></div>
+        <div class="signup-footer">
+            <button>Sign up</button>
+            <p>Or Sign up with</p>
+            <button>Sign up with Linked In</button>
+        </div>
     </section>
 
 
