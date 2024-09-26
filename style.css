@@ -217,12 +217,15 @@ body {
 
 .indicator .indicator-low {
   background-color: rgb(244, 4, 4);
+  visibility: hidden;
 }
 .indicator .indicator-medium {
   background-color: rgb(235, 204, 103);
+  visibility: hidden;
 }
 .indicator .indicator-high {
   background-color: rgb(31, 223, 66);
+  visibility: hidden;
 }
 
 .indicator-text {
@@ -231,6 +234,7 @@ body {
   font-size: 0.8rem;
   text-align: center;
   margin-top: 5px;
+  visibility: hidden;
 }
 
 /* sign up footer  */
