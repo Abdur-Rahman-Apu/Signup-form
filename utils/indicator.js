@@ -89,12 +89,15 @@ export default function indicator() {
     updateIndicatorInTheUI(null);
   } else if (passwordLength < 4) {
     // low indicator
+    console.log("low");
     updateIndicatorInTheUI("low");
-  } else if (passwordLength < 8 && passwordRuleRemaining >= 1) {
+  } else if (passwordLength < 8 || passwordRuleRemaining >= 1) {
     // medium indicator
+    console.log("medium");
     updateIndicatorInTheUI("medium");
-  } else if (passwordLength > 7 && passwordRuleRemaining === 0) {
+  } else if (passwordLength > 7 || passwordRuleRemaining === 0) {
     //high indicator
+    console.log("high");
     updateIndicatorInTheUI("high");
   }
 }
