@@ -54,7 +54,7 @@ body {
 .signup-form {
   width: 100%;
   padding: 10px 15px;
-  display: none;
+  display: grid;
   grid-template-columns: repeat(1, 1fr);
   align-items: center;
   gap: 10px;
@@ -104,6 +104,7 @@ body {
   opacity: 0;
   scale: 0;
   transition: all 1s;
+  z-index: 100;
 }
 
 .input-info:hover span {
@@ -238,7 +239,7 @@ body {
 
 /* sign up success part  */
 .signup-success {
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -272,7 +273,7 @@ body {
 }
 
 .before-signup {
-  display: none;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
@@ -280,7 +281,7 @@ body {
 }
 
 .after-signup {
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   height: 100%;
