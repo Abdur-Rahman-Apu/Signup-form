@@ -57,7 +57,7 @@ body {
   width: 100%;
   /* height: 60%; */
   padding: 10px 15px;
-  display: grid;
+  display: none;
   grid-template-columns: repeat(1, 1fr);
   align-items: center;
   gap: 10px;
@@ -237,17 +237,48 @@ body {
   visibility: hidden;
 }
 
+/* sign up success part  */
+
+.signup-success {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  height: calc(100vh - 220px);
+}
+.signup-success img {
+  width: 15vw;
+}
+
+.signup-success-message {
+  font-family: var(--poppins);
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #d7b59f;
+}
+
 /* sign up footer  */
 .signup-footer {
   width: 100%;
   /* height: 20%; */
   /* background-color: #16c73d; */
-  display: flex;
+  margin: 40px 0;
+}
+
+.before-signup {
+  display: none;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
   gap: 7px;
-  margin: 40px 0;
+}
+
+.after-signup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
 .signup-footer p {
@@ -277,7 +308,8 @@ body {
   box-shadow: none;
 }
 
-.signup-btn i {
+.signup-btn i,
+.go-back-btn i {
   margin-left: 3px;
 }
 
@@ -338,6 +370,10 @@ body {
   .signup-form {
     height: 60%;
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .signup-success {
+    height: calc(100vh - 40%);
   }
 
   .signup-form label {
