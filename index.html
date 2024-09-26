@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signup</title>
+    <!-- google font  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
@@ -12,6 +13,10 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
 
+    <!-- font awesome  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
 
 </head>
@@ -26,53 +31,116 @@
         <div class="signup-form">
             <!-- name-part  -->
             <div class="name-part">
-                <label for="name">Name</label>
+                <div class="input-label">
+                    <label for="name">Name*</label>
+                    <button class="input-info" title="button">
+                        <i class="fas fa-question-circle"></i>
+                        <span>Must be a valid name. It can contain only one space between each word</span>
+                    </button>
+                </div>
                 <input type="text" name="name" id="name" placeholder="Ex- Abdur Rahman">
-                <p class="name-input-err msg input-err-msg">Enter valid name</p>
+                <p class="name-input-err msg input-err-msg hide">Enter valid name</p>
             </div>
 
             <!-- email-part  -->
             <div class="email-part">
-                <label for="email">Email*</label>
+                <div class="input-label">
+                    <label for="email">Email*</label>
+                    <button class="input-info">
+                        <i class="fas fa-question-circle"></i>
+                        <span>Must be a valid email like a123@gmail.com</span>
+                    </button>
+                </div>
+
                 <input type="text" name="email" id="email" placeholder="abc@dev.com">
-                <p class="email-input-err msg input-err-msg">Enter valid email</p>
+                <p class="email-input-err msg input-err-msg hide">Enter valid email</p>
             </div>
 
             <!-- phone-part  -->
             <div class="phone-part">
-                <label for="phone">Phone</label>
+                <div class="input-label">
+                    <label for="phone">Phone*</label>
+                    <button class="input-info">
+                        <i class="fas fa-question-circle"></i>
+                        <span>Valid Bangladeshi mobile number like - +88017****,
+                            017***,88017***. In the position of 7, the digit will be between 3 to 9.</span>
+                    </button>
+                </div>
+
                 <input type="text" name="phone" id="phone" placeholder="+88014*****">
-                <p class="phone-input-err msg input-err-msg">Enter valid number</p>
+                <p class="phone-input-err msg input-err-msg hide">Enter valid number</p>
             </div>
 
             <!-- linkedin profile slug part  -->
             <div class="linkedin-profile-part">
-                <label for="phone">Profile</label>
+                <div class="input-label">
+                    <label for="phone">LinkedIn Profile*</label>
+                    <button class="input-info">
+                        <i class="fas fa-question-circle"></i>
+                        <span>Your linkedin profile url</span>
+                    </button>
+                </div>
+
                 <input type="text" name="profile" id="profile" placeholder="https://www.linkedin.com/in/ab-apu/">
-                <p class="profile-input-err msg input-err-msg">Enter valid url</p>
+                <p class="profile-input-err msg input-err-msg hide">Enter valid URL</p>
             </div>
 
             <!-- password part  -->
             <div class="mdi-textbox-password">
-                <label for="password">Password</label>
-                <input type="text" name="password" id="password" placeholder="*****************">
-                <p class="password-input-err msg input-err-msg">Enter valid password</p>
+                <div class="input-label">
+                    <label for="password">Password*</label>
+                    <button class="input-info">
+                        <i class="fas fa-question-circle"></i>
+                        <span>
+                            Rules-
+                            <ul>
+                                <li>1 uppercase letter</li>
+                                <li>1 lowercase letter</li>
+                                <li>1 special character</li>
+                                <li>1 digit</li>
+                                <li>Min 8 character long</li>
+                            </ul>
+
+
+                        </span>
+                    </button>
+                </div>
+
+                <div class="password-input-box">
+                    <input type="password" name="password" id="password" placeholder="*****************">
+                    <i class="fas fa-eye open"></i>
+                    <i class="fas fa-eye-slash close"></i>
+                </div>
+                <p class="password-input-err msg input-err-msg hide">Enter valid password</p>
             </div>
 
             <!-- password related  -->
             <div class="password-strength-generate">
-                <button>G</button>
+                <button class="generate-pass-btn">Generate<i class="fas fa-random"></i></button>
                 <div class="strength-indicator">
-                    <p class="indicator"></p>
+                    <div class="indicator">
+                        <div class="indicator-low"></div>
+                        <div class="indicator-medium"></div>
+                        <div class="indicator-high"></div>
+                    </div>
                     <p class="indicator-text">Low</p>
                 </div>
             </div>
         </div>
 
         <div class="signup-footer">
-            <button class="signup-btn">Sign up</button>
+            <button class="signup-btn">
+                Sign up
+                <i class="fas fa-sign-in-alt"></i>
+            </button>
             <p>Or Sign up with</p>
-            <button>Sign up with Linked In</button>
+            <button class="signup-linkedin">
+                <img src="./assets/images/linkedin.png" alt="An image which indicates the linkedin social media">
+                <p class="signup-linkedin-text">
+                    Sign up with LinkedIn
+                </p>
+
+            </button>
         </div>
     </section>
 
