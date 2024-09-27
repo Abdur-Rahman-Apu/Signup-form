@@ -23,6 +23,11 @@ const isPhoneNumberValid = (str) =>
 const isLinkedInProfileUrlValid = (str) =>
   getRegex(/^https:\/\/www\.linkedin\.com\/in\/[a-z\-]+\/$/).test(str);
 
+const isPasswordValid = (str) =>
+  getRegex(
+    /^(?=.*[a-z])(?=.*[A-Z])(?=.*[\d])(?=.*[\!"#$%&'\(\)\*\+,-\/:;\<\>\?@`{}\|~\[\]^\.\\_]).{8,}$/
+  ).test(str);
+
 export {
   getRegex,
   isDigitPresent,
@@ -30,6 +35,7 @@ export {
   isLinkedInProfileUrlValid,
   isLowercasePresent,
   isNameValid,
+  isPasswordValid,
   isPhoneNumberValid,
   isSpecialCharacterPresent,
   isUppercasePresent,
