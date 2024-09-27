@@ -13,10 +13,24 @@ const isSpecialCharacterPresent = (str) =>
 const isLowercasePresent = (str) => getRegex(/[a-z]/).test(str);
 const isUppercasePresent = (str) => getRegex(/[A-Z]/).test(str);
 
+const isNameValid = (str) => getRegex(/^[a-zA-Z ]+$/).test(str);
+
+const isEmailValid = (str) => getRegex(/^[a-z]+@[a-z]+\.[a-z]+$/).test(str);
+
+const isPhoneNumberValid = (str) =>
+  getRegex(/^\+?(88)?(01)[3-9]\d{8}$/).test(str);
+
+const isLinkedInProfileUrlValid = (str) =>
+  getRegex(/^https:\/\/www\.linkedin\.com\/in\/[a-z\-]+\/$/).test(str);
+
 export {
   getRegex,
   isDigitPresent,
+  isEmailValid,
+  isLinkedInProfileUrlValid,
   isLowercasePresent,
+  isNameValid,
+  isPhoneNumberValid,
   isSpecialCharacterPresent,
   isUppercasePresent,
 };
