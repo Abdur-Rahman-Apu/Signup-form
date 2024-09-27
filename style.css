@@ -127,7 +127,7 @@ body {
   background: linear-gradient(10deg, #422a60, #b77ee8);
   color: #fff;
   border: none;
-  outline: 2px solid transparent;
+  outline: 1px solid transparent;
   border-radius: 8px;
   box-shadow: 2px 2px 2px #000;
   padding: 3px 8px;
@@ -139,9 +139,14 @@ body {
   font-size: 0.6rem;
 }
 
+.signup-form input:invalid {
+  outline: 1px solid #f80000;
+}
+
 .signup-form input:focus {
   box-shadow: 2px 2px 2px inset #000000;
   background: #141414;
+  outline: 1px solid #9e03ff;
 }
 
 #password {
