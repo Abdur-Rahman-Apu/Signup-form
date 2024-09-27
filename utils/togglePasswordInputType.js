@@ -11,6 +11,4 @@ export default function togglePasswordInputType({ action }) {
     passwordInput.type = "password";
     setStyle(passwordCloseIcon, { display: "none" });
   }
-
-  console.log(type, "password type");
 }

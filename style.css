@@ -367,8 +367,7 @@ button:hover {
     font-size: 1.28rem;
   }
 }
-@media (min-width: 480px) {
-}
+
 @media (min-width: 768px) {
   body {
     height: 100vh;

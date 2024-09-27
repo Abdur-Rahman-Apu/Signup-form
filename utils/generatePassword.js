@@ -6,21 +6,18 @@ import {
   isUppercasePresent,
 } from "./regularExpressions.js";
 
+// Check in the generated password, is there any password rule is missing? if missing, then return the range of the ascii value of that rule. For example, special character is missing, then the range of ascii value is 33-47 will be returned as an object like {min:33,max:47}
 const decideWhichPasswordRuleIsMissing = (inputValue) => {
   if (!isSpecialCharacterPresent(inputValue)) {
-    console.log("Special missing");
     return { min: 33, max: 47 };
   }
   if (!isDigitPresent(inputValue)) {
-    console.log("digit missing");
     return { min: 48, max: 57 };
   }
   if (!isUppercasePresent(inputValue)) {
-    console.log("upper missing");
     return { min: 67, max: 90 };
   }
   if (!isLowercasePresent(inputValue)) {
-    console.log("lower missing");
     return { min: 97, max: 122 };
   }
 };
@@ -32,22 +29,20 @@ const generatePassword = () => {
     let min = 33;
     let max = 126;
 
-    console.log(password, "before password", min, max, i);
-
     if (i % 2 !== 0) {
       const newAsciiRange = decideWhichPasswordRuleIsMissing(password);
-      console.log(newAsciiRange, "receive new ascii");
+
+      // if new ascii range found then update the min and max value
       if (newAsciiRange) {
         min = newAsciiRange.min;
         max = newAsciiRange.max;
       }
     }
-    console.log(min, max, i, "min max");
 
+    // generate password randomly and transformed the numeric value of ascii code into ascii character
     password += String.fromCharCode(getRandomValue(min, max));
-
-    console.log(password, "after password", min, max, i);
   }
+
   return password;
 };
 

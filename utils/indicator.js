@@ -13,33 +13,31 @@ import {
   isUppercasePresent,
 } from "./regularExpressions.js";
 
+// we have 4 rule: minimum 1 uppercase, 1 lowercase, 1 digit and 1 special character. The below function will check, how many rules are remaining
 const remainingPasswordRule = () => {
   const passwordValue = passwordInput.value;
   let remainingRule = 4;
 
   if (isDigitPresent(passwordValue)) {
-    console.log("number present");
     remainingRule--;
   }
 
   if (isSpecialCharacterPresent(passwordValue)) {
-    console.log("special present");
     remainingRule--;
   }
 
   if (isLowercasePresent(passwordValue)) {
-    console.log("Lower present");
     remainingRule--;
   }
 
   if (isUppercasePresent(passwordValue)) {
-    console.log("upper present");
     remainingRule--;
   }
 
   return remainingRule;
 };
 
+// show indicator of the password strength
 const updateIndicatorInTheUI = (type) => {
   switch (type) {
     case "low":
@@ -48,7 +46,6 @@ const updateIndicatorInTheUI = (type) => {
       setStyle(highPassIndicatorElm, { visibility: "hidden" });
       setStyle(indicatorTextElm, { visibility: "visible" });
       setText(indicatorTextElm, "Low");
-
       break;
 
     case "medium":
@@ -83,21 +80,17 @@ export default function indicator() {
 
   const passwordRuleRemaining = remainingPasswordRule();
 
-  console.log(passwordRuleRemaining, "password rule remaining");
   if (!passwordLength) {
     // empty field
     updateIndicatorInTheUI(null);
   } else if (passwordLength < 4) {
     // low indicator
-    console.log("low");
     updateIndicatorInTheUI("low");
   } else if (passwordLength < 8 || passwordRuleRemaining >= 1) {
     // medium indicator
-    console.log("medium");
     updateIndicatorInTheUI("medium");
   } else if (passwordLength > 7 || passwordRuleRemaining === 0) {
     //high indicator
-    console.log("high");
     updateIndicatorInTheUI("high");
   }
 }
