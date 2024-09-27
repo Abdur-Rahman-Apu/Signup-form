@@ -10,6 +10,7 @@
 ---
 
 ![Project Demo](./assets/gif/signup.gif)
+
 _Demo of the Signup Form in Action: This GIF showcases the form filling process, including validation and error handling._
 
 🔗 [Try the Live Demo](https://abdur-rahman-apu.github.io/Signup-form/)
